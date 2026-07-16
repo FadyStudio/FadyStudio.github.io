@@ -43,6 +43,14 @@ nav.pill a.on{ opacity:1; background:var(--bone); color:var(--black) }
 .btn:hover,.btn:focus-visible{ background:var(--bone); color:var(--black); outline:none }
 @media(max-width:860px){ nav.pill{ display:none } header.site{ padding:16px 20px } .avail{ display:none } }
 
+/* solid header variant — used above light-themed embedded case studies */
+header.site.solid{ position:sticky; top:0; background:var(--black); border-bottom:1px solid var(--line) }
+.embed-case{ background:#fff }
+
+/* client logo wall (white-on-black boards sit natively on house black) */
+.logo-wall-in{ max-width:1160px; margin:0 auto; padding:4vh 6vw 14vh; display:grid; gap:40px }
+.logo-wall-in img{ width:100%; border-radius:8px }
+
 /* ============ HOME HERO ============ */
 .hero{ position:relative; height:100svh; min-height:600px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center }
 .hero-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; animation:settle 2.6s cubic-bezier(.2,.7,.2,1) both }
