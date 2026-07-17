@@ -47,9 +47,16 @@ nav.pill a.on{ opacity:1; background:var(--bone); color:var(--black) }
 header.site.solid{ position:sticky; top:0; background:var(--black); border-bottom:1px solid var(--line) }
 .embed-case{ background:#fff }
 
-/* client logo wall (white-on-black boards sit natively on house black) */
-.logo-wall-in{ max-width:1160px; margin:0 auto; padding:4vh 6vw 14vh; display:grid; gap:40px }
-.logo-wall-in img{ width:100%; border-radius:8px }
+/* client logo wall — compact, two boards side by side reading as one image,
+   placed as the last section before contact */
+.logo-wall{ padding:10vh 0 4vh }
+.logo-wall-in{ max-width:1060px; margin:0 auto; padding:5vh 6vw 0; display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:center }
+.logo-wall-in img{ width:100%; display:block }
+.logo-wall-in img:first-child{ border-radius:8px 0 0 8px }
+.logo-wall-in img:last-child{ border-radius:0 8px 8px 0 }
+@media(max-width:700px){ .logo-wall-in{ grid-template-columns:1fr } .logo-wall-in img{ border-radius:0 } .logo-wall-in img:first-child{ border-radius:8px 8px 0 0 } .logo-wall-in img:last-child{ border-radius:0 0 8px 8px } }
+
+.embed-media{ padding-bottom:6vh }
 
 /* ============ HOME HERO ============ */
 .hero{ position:relative; height:100svh; min-height:600px; overflow:hidden; display:flex; align-items:center; justify-content:center; text-align:center }
